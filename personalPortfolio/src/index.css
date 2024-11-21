@@ -7,17 +7,21 @@
   --button: #facc16;
 }
 
+::-webkit-scrollbar{
+  border: 0px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-color);
-  overflow: hidden;
 }
 
 a{
   text-decoration: none;
-}
-
-#homePage{
 }
 
 .navBar {
@@ -25,6 +29,9 @@ a{
   background-color: var(--navBar);
   height: 6vh;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navBarElements {
@@ -76,7 +83,7 @@ a{
   cursor: pointer;
 }
 
-.imgBox {
+.imgBox1 {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -129,7 +136,70 @@ a{
   transition: 0.4s;
 }
 
-.scrollableSection{
-  display: flex;
-  
+.container{
+  display: grid;
+  height: 210vh;
 }
+
+.imgBox2{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(209, 215, 220);
+  /* border: 1px solid; */
+  border-radius: 45px;
+  top: 40%;
+  left: 190px;
+  transform: translate(0%, -50%);
+  box-shadow: -10px 10px 0 0 var(--button); /* Зміщення вправо і вниз */
+}
+
+.meText{
+  color: var(--button);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.aboutText{
+  display: flex;
+  justify-content: center;
+  margin-top: -200px;
+  color: var(--text);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.textDescription{
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-left: 530px;
+  color: var(--text);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+.contactButton2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-44%);
+  width: 160px;
+  height: 40px;
+  color: var(--navBar);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  background-color: var(--button);
+  border: 1px solid;
+  border-radius: 7px;
+  font-size: 23px;
+  transition: 0.4s;
+}
+
+.contactButton2:hover{
+  width: 170px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
